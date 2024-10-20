@@ -1,8 +1,7 @@
 import discord
 import logging
-from discord.ext import commands, tasks
-from config import BOT_STATUS, GUILD_ID, NSC_ROLES
-from datetime import datetime, timedelta
+from discord.ext import commands
+from datetime import datetime
 import json
 import os
 
@@ -38,7 +37,6 @@ class BotStatus(commands.Cog):
             json.dump({"message_id": self.status_message_id}, f)
 
     @commands.command(name="botstatus")
-    @commands.has_any_role(*NSC_ROLES)
     async def set_status(self, ctx, status: int):
         """
         Sets the bot's LOA status and updates the status embed.
