@@ -5,7 +5,7 @@ from typing import Optional
 
 from discord.ext import commands
 
-from src.cogs import EXTENTIONS
+from cogs import EXTENTIONS
 
 log= getLogger(__name__)
 import discord
